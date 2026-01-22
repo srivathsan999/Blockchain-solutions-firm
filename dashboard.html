@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BlockChain Solutions</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'bg-light': '#FFFFFF',
+                        'text-primary-light': '#0F172A',
+                        'text-secondary-light': '#475569',
+                        'accent-light': '#2563EB',
+                        'border-light': '#E2E8F0',
+                        'bg-dark': '#020617',
+                        'text-primary-dark': '#E5E7EB',
+                        'text-secondary-dark': '#94A3B8',
+                        'accent-dark': '#3B82F6',
+                        'border-dark': '#1E293B',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-[#020617] text-[#0F172A] dark:text-[#E5E7EB]">
+    <!-- Top Bar with Logo and Logout -->
+    <div class="py-6 border-b border-[#E2E8F0] dark:border-[#1E293B]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="#2563EB" class="dark:fill-[#3B82F6]"/>
+                        <path d="M12 20L18 14L28 24L32 20L28 16L18 26L12 20Z" fill="white"/>
+                        <circle cx="20" cy="20" r="2" fill="white"/>
+                    </svg>
+                    <span class="text-2xl font-bold text-[#0F172A] dark:text-[#E5E7EB]">BlockChain Solutions</span>
+                </a>
+                <button id="logout-btn" class="px-4 py-2 border border-[#E2E8F0] dark:border-[#1E293B] rounded hover:bg-[#F8FAFC] dark:hover:bg-[#0F172A] transition-colors text-sm font-medium text-[#0F172A] dark:text-[#E5E7EB]">
+                    Logout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Header -->
+    <section class="py-8 bg-[#F8FAFC] dark:bg-[#0F172A] border-b border-[#E2E8F0] dark:border-[#1E293B]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center">
+                <div>
+                    <h1 class="text-3xl font-bold text-[#0F172A] dark:text-[#E5E7EB] mb-2">Dashboard</h1>
+                    <p class="text-[#475569] dark:text-[#94A3B8]">Welcome back! Here's an overview of your blockchain projects and activity.</p>
+                </div>
+                <div class="mt-4 sm:mt-0">
+                    <a href="contact.html" class="bg-[#2563EB] dark:bg-[#3B82F6] text-white px-6 py-2 rounded hover:bg-[#1D4ED8] dark:hover:bg-[#2563EB] transition-all hover-lift inline-block">New Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Overview -->
+    <section class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white dark:bg-[#020617] p-6 rounded border border-[#E2E8F0] dark:border-[#1E293B] text-center card-hover animate-scale-in animate-delay-100">
+                    <div class="text-3xl font-bold text-[#2563EB] dark:text-[#3B82F6] mb-2">12</div>
+                    <div class="text-[#475569] dark:text-[#94A3B8] text-sm font-medium">Active Projects</div>
+                </div>
+                <div class="bg-white dark:bg-[#020617] p-6 rounded border border-[#E2E8F0] dark:border-[#1E293B] text-center card-hover animate-scale-in animate-delay-200">
+                    <div class="text-3xl font-bold text-[#2563EB] dark:text-[#3B82F6] mb-2">8</div>
+                    <div class="text-[#475569] dark:text-[#94A3B8] text-sm font-medium">Smart Contracts</div>
+                </div>
+                <div class="bg-white dark:bg-[#020617] p-6 rounded border border-[#E2E8F0] dark:border-[#1E293B] text-center card-hover animate-scale-in animate-delay-300">
+                    <div class="text-3xl font-bold text-[#2563EB] dark:text-[#3B82F6] mb-2">1,247</div>
+                    <div class="text-[#475569] dark:text-[#94A3B8] text-sm font-medium">Transactions Today</div>
+                </div>
+                <div class="bg-white dark:bg-[#020617] p-6 rounded border border-[#E2E8F0] dark:border-[#1E293B] text-center card-hover animate-scale-in animate-delay-400">
+                    <div class="text-3xl font-bold text-[#2563EB] dark:text-[#3B82F6] mb-2">99.9%</div>
+                    <div class="text-[#475569] dark:text-[#94A3B8] text-sm font-medium">Uptime</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Dashboard Content -->
+    <section class="py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Active Projects -->
+                <div class="lg:col-span-2">
+                    <div class="bg-white dark:bg-[#020617] rounded border border-[#E2E8F0] dark:border-[#1E293B] animate-fade-in">
+                        <div class="p-6 border-b border-[#E2E8F0] dark:border-[#1E293B]">
+                            <h2 class="text-xl font-bold text-[#0F172A] dark:text-[#E5E7EB]">Active Projects</h2>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="flex items-start justify-between p-4 border border-[#E2E8F0] dark:border-[#1E293B] rounded hover:bg-[#F8FAFC] dark:hover:bg-[#0F172A] transition-all card-hover animate-fade-in animate-delay-100">
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-[#0F172A] dark:text-[#E5E7EB] mb-1">Supply Chain Tracking System</h3>
+                                    <p class="text-sm text-[#475569] dark:text-[#94A3B8] mb-2">Enterprise blockchain network for product traceability</p>
+                                    <div class="flex items-center space-x-4 text-xs text-[#475569] dark:text-[#94A3B8]">
+                                        <span>Status: <span class="text-green-600 dark:text-green-400 font-medium">Active</span></span>
+                                        <span>Last updated: 2 hours ago</span>
+                                    </div>
+                                </div>
+                                <button class="view-project-btn text-[#2563EB] dark:text-[#3B82F6] hover:underline text-sm font-medium" data-project="Supply Chain Tracking System">View →</button>
+                            </div>
+                            <div class="flex items-start justify-between p-4 border border-[#E2E8F0] dark:border-[#1E293B] rounded hover:bg-[#F8FAFC] dark:hover:bg-[#0F172A] transition-all card-hover animate-fade-in animate-delay-200">
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-[#0F172A] dark:text-[#E5E7EB] mb-1">Digital Identity Platform</h3>
+                                    <p class="text-sm text-[#475569] dark:text-[#94A3B8] mb-2">KYC/AML solution for financial institutions</p>
+                                    <div class="flex items-center space-x-4 text-xs text-[#475569] dark:text-[#94A3B8]">
+                                        <span>Status: <span class="text-green-600 dark:text-green-400 font-medium">Active</span></span>
+                                        <span>Last updated: 5 hours ago</span>
+                                    </div>
+                                </div>
+                                <button class="view-project-btn text-[#2563EB] dark:text-[#3B82F6] hover:underline text-sm font-medium" data-project="Digital Identity Platform">View →</button>
+                            </div>
+                            <div class="flex items-start justify-between p-4 border border-[#E2E8F0] dark:border-[#1E293B] rounded hover:bg-[#F8FAFC] dark:hover:bg-[#0F172A] transition-all card-hover animate-fade-in animate-delay-300">
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-[#0F172A] dark:text-[#E5E7EB] mb-1">Payment Processing Network</h3>
+                                    <p class="text-sm text-[#475569] dark:text-[#94A3B8] mb-2">Cross-border payment system with smart contracts</p>
+                                    <div class="flex items-center space-x-4 text-xs text-[#475569] dark:text-[#94A3B8]">
+                                        <span>Status: <span class="text-yellow-600 dark:text-yellow-400 font-medium">In Development</span></span>
+                                        <span>Last updated: 1 day ago</span>
+                                    </div>
+                                </div>
+                                <button class="view-project-btn text-[#2563EB] dark:text-[#3B82F6] hover:underline text-sm font-medium" data-project="Payment Processing Network">View →</button>
+                            </div>
+                            <div class="flex items-start justify-between p-4 border border-[#E2E8F0] dark:border-[#1E293B] rounded hover:bg-[#F8FAFC] dark:hover:bg-[#0F172A] transition-all card-hover animate-fade-in animate-delay-400">
+                                <div class="flex-1">
+                                    <h3 class="font-semibold text-[#0F172A] dark:text-[#E5E7EB] mb-1">Healthcare Data Network</h3>
+                                    <p class="text-sm text-[#475569] dark:text-[#94A3B8] mb-2">HIPAA-compliant medical records sharing</p>
+                                    <div class="flex items-center space-x-4 text-xs text-[#475569] dark:text-[#94A3B8]">
+                                        <span>Status: <span class="text-green-600 dark:text-green-400 font-medium">Active</span></span>
+                                        <span>Last updated: 3 days ago</span>
+                                    </div>
+                                </div>
+                                <button class="view-project-btn text-[#2563EB] dark:text-[#3B82F6] hover:underline text-sm font-medium" data-project="Healthcare Data Network">View →</button>
+                            </div>
+                        </div>
+                        <div class="p-6 border-t border-[#E2E8F0] dark:border-[#1E293B]">
+                            <button id="view-all-projects-btn" class="text-[#2563EB] dark:text-[#3B82F6] hover:underline font-medium text-sm">View All Projects →</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sidebar -->
+                <div class="space-y-6">
+                    <!-- Quick Actions -->
+                    <div class="bg-white dark:bg-[#020617] rounded border border-[#E2E8F0] dark:border-[#1E293B] animate-fade-in animate-delay-200">
+                        <div class="p-6 border-b border-[#E2E8F0] dark:border-[#1E293B]">
+                            <h2 class="text-xl font-bold text-[#0F172A] dark:text-[#E5E7EB]">Quick Actions</h2>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <a href="contact.html" class="block w-full text-left px-4 py-2 border border-[#E2E8F0] dark:border-[#1E293B] rounded hover:bg-[#F8FAFC] dark:hover:bg-[#0F172A] transition-all hover-lift text-sm font-medium text-[#0F172A] dark:text-[#E5E7EB]">Create New Project</a>
+                            <a href="solutions.html" class="block w-full text-left px-4 py-2 border border-[#E2E8F0] dark:border-[#1E293B] rounded hover:bg-[#F8FAFC] dark:hover:bg-[#0F172A] transition-all hover-lift text-sm font-medium text-[#0F172A] dark:text-[#E5E7EB]">Deploy Smart Contract</a>
+                            <a href="contact.html" class="block w-full text-left px-4 py-2 border border-[#E2E8F0] dark:border-[#1E293B] rounded hover:bg-[#F8FAFC] dark:hover:bg-[#0F172A] transition-all hover-lift text-sm font-medium text-[#0F172A] dark:text-[#E5E7EB]">Request Support</a>
+                            <a href="case-studies.html" class="block w-full text-left px-4 py-2 border border-[#E2E8F0] dark:border-[#1E293B] rounded hover:bg-[#F8FAFC] dark:hover:bg-[#0F172A] transition-all hover-lift text-sm font-medium text-[#0F172A] dark:text-[#E5E7EB]">View Documentation</a>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="bg-white dark:bg-[#020617] rounded border border-[#E2E8F0] dark:border-[#1E293B] animate-fade-in animate-delay-300">
+                        <div class="p-6 border-b border-[#E2E8F0] dark:border-[#1E293B]">
+                            <h2 class="text-xl font-bold text-[#0F172A] dark:text-[#E5E7EB]">Recent Activity</h2>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div class="text-sm animate-fade-in animate-delay-100">
+                                <p class="text-[#0F172A] dark:text-[#E5E7EB] font-medium mb-1">Smart contract deployed</p>
+                                <p class="text-[#475569] dark:text-[#94A3B8] text-xs">Supply Chain Tracking System • 2 hours ago</p>
+                            </div>
+                            <div class="text-sm animate-fade-in animate-delay-200">
+                                <p class="text-[#0F172A] dark:text-[#E5E7EB] font-medium mb-1">Project updated</p>
+                                <p class="text-[#475569] dark:text-[#94A3B8] text-xs">Digital Identity Platform • 5 hours ago</p>
+                            </div>
+                            <div class="text-sm animate-fade-in animate-delay-300">
+                                <p class="text-[#0F172A] dark:text-[#E5E7EB] font-medium mb-1">New transaction processed</p>
+                                <p class="text-[#475569] dark:text-[#94A3B8] text-xs">Payment Network • 1 day ago</p>
+                            </div>
+                            <div class="text-sm animate-fade-in animate-delay-400">
+                                <p class="text-[#0F172A] dark:text-[#E5E7EB] font-medium mb-1">Security audit completed</p>
+                                <p class="text-[#475569] dark:text-[#94A3B8] text-xs">Healthcare Data Network • 3 days ago</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Account Info -->
+                    <div class="bg-white dark:bg-[#020617] rounded border border-[#E2E8F0] dark:border-[#1E293B] animate-fade-in animate-delay-400">
+                        <div class="p-6 border-b border-[#E2E8F0] dark:border-[#1E293B]">
+                            <h2 class="text-xl font-bold text-[#0F172A] dark:text-[#E5E7EB]">Account</h2>
+                        </div>
+                        <div class="p-6 space-y-4">
+                            <div>
+                                <p class="text-sm text-[#475569] dark:text-[#94A3B8] mb-1">Plan</p>
+                                <p class="text-[#0F172A] dark:text-[#E5E7EB] font-semibold">Enterprise</p>
+                            </div>
+                            <div>
+                                <p class="text-sm text-[#475569] dark:text-[#94A3B8] mb-1">API Usage</p>
+                                <div class="w-full bg-[#E2E8F0] dark:bg-[#1E293B] rounded-full h-2 mb-1">
+                                    <div class="bg-[#2563EB] dark:bg-[#3B82F6] h-2 rounded-full" style="width: 65%"></div>
+                                </div>
+                                <p class="text-xs text-[#475569] dark:text-[#94A3B8]">65% of monthly limit</p>
+                            </div>
+                            <a href="contact.html" class="block text-center text-sm text-[#2563EB] dark:text-[#3B82F6] hover:underline font-medium">Manage Account →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Dashboard-specific functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Logout functionality
+            const logoutBtn = document.getElementById('logout-btn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', function() {
+                    // Clear any user session data (if stored)
+                    localStorage.removeItem('userToken');
+                    localStorage.removeItem('userData');
+                    // Redirect to home page
+                    window.location.href = 'index.html';
+                });
+            }
+
+            // View Project buttons
+            const viewProjectBtns = document.querySelectorAll('.view-project-btn');
+            viewProjectBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const projectName = this.getAttribute('data-project');
+                    alert(`Opening project: ${projectName}\n\nThis would typically navigate to a detailed project view page.`);
+                    // In a real application, you would navigate to: window.location.href = `project-detail.html?id=${projectId}`;
+                });
+            });
+
+            // View All Projects button
+            const viewAllProjectsBtn = document.getElementById('view-all-projects-btn');
+            if (viewAllProjectsBtn) {
+                viewAllProjectsBtn.addEventListener('click', function() {
+                    alert('Loading all projects...\n\nThis would typically navigate to a projects listing page.');
+                    // In a real application, you would navigate to: window.location.href = 'projects.html';
+                });
+            }
+
+            // New Project button (already has href, but adding confirmation)
+            const newProjectBtn = document.querySelector('a[href="contact.html"]');
+            if (newProjectBtn && newProjectBtn.textContent.includes('New Project')) {
+                newProjectBtn.addEventListener('click', function(e) {
+                    // Optional: Add confirmation or analytics tracking here
+                    // The link will proceed normally
+                });
+            }
+
+            // Quick Actions buttons - they already have hrefs, functionality works via href
+            // All Quick Action links are already functional and will navigate to their respective pages
+
+            // Manage Account button
+            const manageAccountBtn = document.querySelector('a[href="contact.html"]:last-of-type');
+            if (manageAccountBtn && manageAccountBtn.textContent.includes('Manage Account')) {
+                manageAccountBtn.addEventListener('click', function(e) {
+                    // Optional: Add confirmation or redirect to account settings
+                    // The link will proceed normally
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
