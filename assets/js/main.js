@@ -1,5 +1,5 @@
 // Theme Toggle Functionality
-(function() {
+(function () {
     // Check for saved theme preference or default to light mode
     const getTheme = () => {
         const savedTheme = localStorage.getItem('theme');
@@ -18,13 +18,13 @@
         document.documentElement.classList.remove('light', 'dark');
         document.documentElement.classList.add(theme);
         localStorage.setItem('theme', theme);
-        
+
         // Update toggle button icons (sun for dark mode, moon for light mode)
         const toggleButtons = document.querySelectorAll('[data-theme-toggle]');
         toggleButtons.forEach(btn => {
             const sunIcon = btn.querySelector('[data-sun-icon]');
             const moonIcon = btn.querySelector('[data-moon-icon]');
-            
+
             if (theme === 'dark') {
                 // Show sun icon (to switch to light mode)
                 if (sunIcon) sunIcon.classList.remove('hidden');
@@ -60,6 +60,33 @@
                 mobileMenu.classList.toggle('hidden');
             });
         }
+
+        // Highlight active menu item
+        const highlightActiveMenu = () => {
+            const currentPath = window.location.pathname;
+            let pageName = currentPath.split('/').pop() || 'index.html';
+            pageName = pageName.split('#')[0].split('?')[0];
+
+            const navLinks = document.querySelectorAll('nav a');
+
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (!href) return;
+
+                // Get the filename from href
+                const linkPage = href.split('/').pop().split('#')[0].split('?')[0];
+
+                if (linkPage === pageName) {
+                    // Check if it's a menu text link (heuristic: checks for default text color)
+                    // This avoids highlighting buttons or the logo
+                    if (link.classList.contains('text-[#0F172A]')) {
+                        link.classList.remove('text-[#0F172A]', 'dark:text-[#E5E7EB]');
+                        link.classList.add('text-[#2563EB]', 'dark:text-[#3B82F6]', 'font-bold');
+                    }
+                }
+            });
+        };
+        highlightActiveMenu();
 
         // Initialize animations on page load
         initializeAnimations();
@@ -99,7 +126,7 @@
         // Add hover effects to cards
         const cards = document.querySelectorAll('.card-hover, .hover-lift');
         cards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
+            card.addEventListener('mouseenter', function () {
                 this.style.transition = 'all 0.3s ease';
             });
         });
