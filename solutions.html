@@ -92,11 +92,26 @@
             </div>
             <div id="mobile-menu" class="hidden xl:hidden pb-4">
                 <div class="flex flex-col space-y-3">
-                    <a href="index.html"
-                        class="text-[#0F172A] dark:text-[#E5E7EB] hover:text-[#2563EB] dark:hover:text-[#3B82F6]">Home</a>
-                    <a href="home-2.html"
-                        class="text-[#0F172A] dark:text-[#E5E7EB] hover:text-[#2563EB] dark:hover:text-[#3B82F6]">Home
-                        2</a>
+                    <!-- Home Dropdown -->
+                    <div class="relative">
+                        <button id="mobile-home-dropdown-btn"
+                            class="w-full text-left text-[#0F172A] dark:text-[#E5E7EB] hover:text-[#2563EB] dark:hover:text-[#3B82F6] flex items-center justify-between">
+                            <span>Home</span>
+                            <svg class="w-4 h-4 transition-transform" id="mobile-home-dropdown-icon" fill="none"
+                                stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7">
+                                </path>
+                            </svg>
+                        </button>
+                        <div id="mobile-home-dropdown" class="hidden flex-col space-y-2 mt-2 ml-4">
+                            <a href="index.html"
+                                class="text-[#475569] dark:text-[#94A3B8] hover:text-[#2563EB] dark:hover:text-[#3B82F6]">Home</a>
+                            <a href="home-2.html"
+                                class="text-[#475569] dark:text-[#94A3B8] hover:text-[#2563EB] dark:hover:text-[#3B82F6]">Home
+                                2</a>
+                        </div>
+                    </div>
                     <a href="solutions.html"
                         class="text-[#0F172A] dark:text-[#E5E7EB] hover:text-[#2563EB] dark:hover:text-[#3B82F6]">Solutions</a>
                     <a href="industries.html"

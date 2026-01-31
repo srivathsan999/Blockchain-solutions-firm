@@ -61,6 +61,18 @@
             });
         }
 
+        // Mobile Home dropdown toggle
+        const mobileHomeDropdownBtn = document.getElementById('mobile-home-dropdown-btn');
+        const mobileHomeDropdown = document.getElementById('mobile-home-dropdown');
+        const mobileHomeDropdownIcon = document.getElementById('mobile-home-dropdown-icon');
+        if (mobileHomeDropdownBtn && mobileHomeDropdown && mobileHomeDropdownIcon) {
+            mobileHomeDropdownBtn.addEventListener('click', () => {
+                mobileHomeDropdown.classList.toggle('hidden');
+                mobileHomeDropdown.classList.toggle('flex');
+                mobileHomeDropdownIcon.classList.toggle('rotate-180');
+            });
+        }
+
         // Highlight active menu item
         const highlightActiveMenu = () => {
             const currentPath = window.location.pathname;
