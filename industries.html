@@ -162,160 +162,199 @@
     <!-- Industries -->
     <section class="py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="space-y-16">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Finance -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in">
-                    <div class="animate-slide-in-left">
+                <div
+                    class="bg-white dark:bg-[#020617] border border-[#E2E8F0] dark:border-[#1E293B] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover-lift animate-fade-in group">
+                    <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
-                            alt="Finance" class="w-full rounded-lg img-hover" loading="lazy" width="800" height="600">
+                            alt="Finance"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h2 class="absolute bottom-4 left-6 text-2xl font-bold text-white">Finance</h2>
                     </div>
-                    <div class="animate-slide-in-right">
-                        <h2 class="text-3xl font-bold text-[#0F172A] dark:text-[#E5E7EB] mb-4">Finance</h2>
-                        <p class="text-[#475569] dark:text-[#94A3B8] mb-4">
+                    <div class="p-6">
+                        <p class="text-[#475569] dark:text-[#94A3B8] mb-6 line-clamp-3">
                             Transform financial operations with secure payment systems, digital asset management, and
-                            regulatory compliance solutions. Our blockchain implementations help financial institutions
-                            reduce costs, improve transparency, and enhance security.
+                            compliance solutions.
                         </p>
-                        <ul class="space-y-2 text-[#475569] dark:text-[#94A3B8] mb-6">
-                            <li>• Cross-border payment systems</li>
-                            <li>• Digital asset custody and management</li>
-                            <li>• Regulatory compliance and reporting</li>
-                            <li>• Trade finance and supply chain finance</li>
-                            <li>• Identity verification and KYC solutions</li>
+                        <ul class="space-y-2 text-sm text-[#475569] dark:text-[#94A3B8] mb-2">
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Cross-border payment systems
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Digital asset custody
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                KYC & Identity verification
+                            </li>
                         </ul>
-                        <a href="contact.html"
-                            class="text-[#2563EB] dark:text-[#3B82F6] hover:underline font-medium hover-lift inline-block">Learn
-                            More →</a>
                     </div>
                 </div>
 
                 <!-- Supply Chain -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in">
-                    <div class="lg:order-2 animate-slide-in-right">
+                <div class="bg-white dark:bg-[#020617] border border-[#E2E8F0] dark:border-[#1E293B] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover-lift animate-fade-in group"
+                    style="animation-delay: 100ms">
+                    <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&q=80&w=800"
-                            alt="Supply Chain" class="w-full rounded-lg img-hover" loading="lazy" width="800"
-                            height="600">
+                            alt="Supply Chain"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h2 class="absolute bottom-4 left-6 text-2xl font-bold text-white">Supply Chain</h2>
                     </div>
-                    <div class="lg:order-1 animate-slide-in-left">
-                        <h2 class="text-3xl font-bold text-[#0F172A] dark:text-[#E5E7EB] mb-4">Supply Chain</h2>
-                        <p class="text-[#475569] dark:text-[#94A3B8] mb-4">
-                            Achieve end-to-end traceability and transparency across your supply chain operations. Track
-                            products from origin to destination, verify authenticity, and streamline logistics
-                            management.
+                    <div class="p-6">
+                        <p class="text-[#475569] dark:text-[#94A3B8] mb-6 line-clamp-3">
+                            Achieve end-to-end traceability and transparency across your supply chain operations.
                         </p>
-                        <ul class="space-y-2 text-[#475569] dark:text-[#94A3B8] mb-6">
-                            <li>• Product provenance and traceability</li>
-                            <li>• Counterfeit prevention and authentication</li>
-                            <li>• Real-time logistics tracking</li>
-                            <li>• Supplier verification and compliance</li>
-                            <li>• Automated contract execution</li>
+                        <ul class="space-y-2 text-sm text-[#475569] dark:text-[#94A3B8] mb-2">
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Product provenance
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Real-time logistics tracking
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Automated contract execution
+                            </li>
                         </ul>
-                        <a href="contact.html"
-                            class="text-[#2563EB] dark:text-[#3B82F6] hover:underline font-medium hover-lift inline-block">Learn
-                            More →</a>
                     </div>
                 </div>
 
                 <!-- Healthcare -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-fade-in">
-                    <div class="animate-slide-in-left">
+                <div class="bg-white dark:bg-[#020617] border border-[#E2E8F0] dark:border-[#1E293B] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover-lift animate-fade-in group"
+                    style="animation-delay: 200ms">
+                    <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&q=80&w=800"
-                            alt="Healthcare" class="w-full rounded-lg img-hover" loading="lazy" width="800"
-                            height="600">
+                            alt="Healthcare"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h2 class="absolute bottom-4 left-6 text-2xl font-bold text-white">Healthcare</h2>
                     </div>
-                    <div class="animate-slide-in-right">
-                        <h2 class="text-3xl font-bold text-[#0F172A] dark:text-[#E5E7EB] mb-4">Healthcare</h2>
-                        <p class="text-[#475569] dark:text-[#94A3B8] mb-4">
+                    <div class="p-6">
+                        <p class="text-[#475569] dark:text-[#94A3B8] mb-6 line-clamp-3">
                             Secure patient data management, medical records, and pharmaceutical supply chain
-                            verification. Ensure HIPAA compliance while enabling secure data sharing and
-                            interoperability.
+                            verification.
                         </p>
-                        <ul class="space-y-2 text-[#475569] dark:text-[#94A3B8] mb-6">
-                            <li>• Secure patient data management</li>
-                            <li>• Medical records interoperability</li>
-                            <li>• Pharmaceutical supply chain tracking</li>
-                            <li>• Clinical trial data integrity</li>
-                            <li>• HIPAA-compliant solutions</li>
+                        <ul class="space-y-2 text-sm text-[#475569] dark:text-[#94A3B8] mb-2">
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Secure patient records
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Pharmaceutical tracking
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Clinical trial integrity
+                            </li>
                         </ul>
-                        <a href="contact.html"
-                            class="text-[#2563EB] dark:text-[#3B82F6] hover:underline font-medium hover-lift inline-block">Learn
-                            More →</a>
                     </div>
                 </div>
 
                 <!-- Government -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="lg:order-2">
+                <div class="bg-white dark:bg-[#020617] border border-[#E2E8F0] dark:border-[#1E293B] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover-lift animate-fade-in group"
+                    style="animation-delay: 300ms">
+                    <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800"
-                            alt="Government" class="w-full rounded-lg" loading="lazy" width="800" height="600">
+                            alt="Government"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h2 class="absolute bottom-4 left-6 text-2xl font-bold text-white">Government</h2>
                     </div>
-                    <div class="lg:order-1">
-                        <h2 class="text-3xl font-bold text-[#0F172A] dark:text-[#E5E7EB] mb-4">Government</h2>
-                        <p class="text-[#475569] dark:text-[#94A3B8] mb-4">
-                            Enhance transparency, reduce fraud, and improve efficiency in government operations. From
-                            identity management to voting systems, blockchain technology can transform public sector
-                            services.
+                    <div class="p-6">
+                        <p class="text-[#475569] dark:text-[#94A3B8] mb-6 line-clamp-3">
+                            Enhance transparency, reduce fraud, and improve efficiency in government operations and
+                            management.
                         </p>
-                        <ul class="space-y-2 text-[#475569] dark:text-[#94A3B8] mb-6">
-                            <li>• Digital identity and credentialing</li>
-                            <li>• Transparent voting systems</li>
-                            <li>• Public record management</li>
-                            <li>• Fraud prevention and detection</li>
-                            <li>• Inter-agency data sharing</li>
+                        <ul class="space-y-2 text-sm text-[#475569] dark:text-[#94A3B8] mb-2">
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Digital identity
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Transparent voting
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Public record management
+                            </li>
                         </ul>
-                        <a href="contact.html"
-                            class="text-[#2563EB] dark:text-[#3B82F6] hover:underline font-medium hover-lift inline-block">Learn
-                            More →</a>
                     </div>
                 </div>
 
                 <!-- Energy -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div>
+                <div class="bg-white dark:bg-[#020617] border border-[#E2E8F0] dark:border-[#1E293B] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover-lift animate-fade-in group"
+                    style="animation-delay: 400ms">
+                    <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&q=80&w=800"
-                            alt="Energy" class="w-full rounded-lg" loading="lazy" width="800" height="600">
+                            alt="Energy"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h2 class="absolute bottom-4 left-6 text-2xl font-bold text-white">Energy</h2>
                     </div>
-                    <div>
-                        <h2 class="text-3xl font-bold text-[#0F172A] dark:text-[#E5E7EB] mb-4">Energy</h2>
-                        <p class="text-[#475569] dark:text-[#94A3B8] mb-4">
+                    <div class="p-6">
+                        <p class="text-[#475569] dark:text-[#94A3B8] mb-6 line-clamp-3">
                             Enable peer-to-peer energy trading, carbon credit tracking, and grid management solutions.
-                            Transform energy distribution and consumption with blockchain technology.
                         </p>
-                        <ul class="space-y-2 text-[#475569] dark:text-[#94A3B8] mb-6">
-                            <li>• Peer-to-peer energy trading</li>
-                            <li>• Carbon credit tracking and trading</li>
-                            <li>• Renewable energy certificate management</li>
-                            <li>• Grid management and optimization</li>
-                            <li>• Energy provenance tracking</li>
+                        <ul class="space-y-2 text-sm text-[#475569] dark:text-[#94A3B8] mb-2">
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Peer-to-peer trading
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Carbon credit tracking
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Grid optimization
+                            </li>
                         </ul>
-                        <a href="contact.html"
-                            class="text-[#2563EB] dark:text-[#3B82F6] hover:underline font-medium hover-lift inline-block">Learn
-                            More →</a>
                     </div>
                 </div>
 
                 <!-- FinTech -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                    <div class="lg:order-2">
+                <div class="bg-white dark:bg-[#020617] border border-[#E2E8F0] dark:border-[#1E293B] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all hover-lift animate-fade-in group"
+                    style="animation-delay: 500ms">
+                    <div class="relative h-48 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?auto=format&fit=crop&q=80&w=800"
-                            alt="FinTech" class="w-full rounded-lg" loading="lazy" width="800" height="600">
+                            alt="FinTech"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                            loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                        <h2 class="absolute bottom-4 left-6 text-2xl font-bold text-white">FinTech</h2>
                     </div>
-                    <div class="lg:order-1">
-                        <h2 class="text-3xl font-bold text-[#0F172A] dark:text-[#E5E7EB] mb-4">FinTech</h2>
-                        <p class="text-[#475569] dark:text-[#94A3B8] mb-4">
-                            Build innovative financial products and services on blockchain infrastructure. From DeFi
-                            applications to digital wallets, we help FinTech companies leverage blockchain technology.
+                    <div class="p-6">
+                        <p class="text-[#475569] dark:text-[#94A3B8] mb-6 line-clamp-3">
+                            Build innovative financial products and services on blockchain infrastructure and solutions.
                         </p>
-                        <ul class="space-y-2 text-[#475569] dark:text-[#94A3B8] mb-6">
-                            <li>• Decentralized finance (DeFi) platforms</li>
-                            <li>• Digital wallet solutions</li>
-                            <li>• Tokenization and asset management</li>
-                            <li>• Lending and borrowing protocols</li>
-                            <li>• Payment and remittance solutions</li>
+                        <ul class="space-y-2 text-sm text-[#475569] dark:text-[#94A3B8] mb-2">
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                DeFi platforms
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Tokenized assets
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-[#2563EB] dark:text-[#3B82F6] mr-2">•</span>
+                                Wallet solutions
+                            </li>
                         </ul>
-                        <a href="contact.html"
-                            class="text-[#2563EB] dark:text-[#3B82F6] hover:underline font-medium hover-lift inline-block">Learn
-                            More →</a>
                     </div>
                 </div>
             </div>
